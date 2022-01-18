@@ -31,7 +31,7 @@ app.get("/heroes/:id", function (req, res) {
 app.post("/heroes", function (req, res) { 
     const item = req.body;
     
-    list.push(item.nome);
+    list.push(item.name);
 
     res.send("Item adicionado com sucesso!");
 });
@@ -42,7 +42,7 @@ app.put("/heroes/:id", function (req, res) {
 
     const item = req.body;
 
-    list[id] = item.nome;
+    list[id] = item.name;
 
     res.send("Item Atualizado com sucesso.");
 });
